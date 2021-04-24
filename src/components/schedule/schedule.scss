@@ -1,35 +1,38 @@
 @import '../../shared/styles/reset';
 @import '../../shared/styles/variables';
 
-.home {
+.schedule {
   width: 100%;
   height: 100%;
   display: block;
-  background: $secondary-colour;
-  position: relative;
+  background: url('../../shared/images/bamboo-background.png') no-repeat;
+  background-size: auto 100%;
+  overflow: hidden;
 
   .primary {
-    width: 50%;
+    width: calc(100% - 12em);
+    height: calc(100% - 6em);
     display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 3em;
     background: $white;
     color: $primary-colour;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Josefin Sans';
+    padding: 0 3em;
 
     &-header {
       text-transform: uppercase;
       font-size: 3em;
       margin-bottom: 0.25em;
-      font-family: 'Josefin Sans';
       font-weight: normal;
     }
-    .secondary-header {
-      margin-top: 0;
-      font-family: 'Dancing Script';
-      font-weight: normal;
+
+    &-rows {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
 
@@ -42,16 +45,5 @@
     border-left: 1em solid $white;
     background: $primary-colour;
     transform: skew(-25deg);
-  }
-
-  .beta-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../../shared/images/bamboo-transparency.png') no-repeat;
-    background-size: auto 175%;
-    background-position: -8em -10em;
   }
 }

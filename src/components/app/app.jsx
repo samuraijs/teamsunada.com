@@ -6,12 +6,16 @@ import {
   Redirect,
 } from 'react-router-dom';
 import Home from '../home';
+import Schedule from '../schedule';
 import './app.scss';
 
 const App = () => {
   return (
     <Router>
       <Switch>
+        <Route path="/schedule">
+          <Schedule />
+        </Route>
         <Route path="/home">
           <Home />
         </Route>

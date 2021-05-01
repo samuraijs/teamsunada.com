@@ -9,12 +9,16 @@ import Home from '../home';
 import Schedule from '../schedule';
 import Logistics from '../logistics';
 import Story from '../story';
+import FAQ from '../faq';
 import './app.scss';
 
 const App = () => {
   return (
     <Router>
       <Switch>
+        <Route path="/faq">
+          <FAQ />
+        </Route>
         <Route path="/story">
           <Story />
         </Route>

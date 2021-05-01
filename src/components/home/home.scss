@@ -52,6 +52,20 @@
     height: 100%;
     background: url('../../shared/images/bamboo-transparency.png') no-repeat;
     background-size: auto 175%;
-    background-position: -8em -10em;
+    background-position: -8em -8em;
   }
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.menu-icon {
+  display: block;
+  color: $white;
+  margin: 1.5em 3em;
+  cursor: pointer;
 }

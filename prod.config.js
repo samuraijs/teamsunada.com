@@ -1,4 +1,4 @@
-// const webpack = require('webpack')
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
       { test: /\.(css)$/, use: ['style-loader', 'css-loader'] },
       { test: /\.(scss)$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
       {
-        test: /\.(ttf|png|jpeg)$/,
+        test: /\.(ttf|png|jpeg|jpg|woff2)$/,
         type: 'asset/resource',
       },
     ],
@@ -33,6 +33,27 @@ module.exports = {
       title: 'www.teamsunada.com',
       template: path.resolve(__dirname, './src/template.html'), // template file
       filename: 'index.html', // output file
+    }),
+    new ImageMinimizerPlugin({
+      minimizerOptions: {
+        // Lossless optimization with custom option
+        // Feel free to experiment with options for better result for you
+        plugins: [
+          ['gifsicle', { interlaced: true }],
+          ['jpegtran', { progressive: true }],
+          ['optipng', { optimizationLevel: 5 }],
+          [
+            'svgo',
+            {
+              plugins: [
+                {
+                  removeViewBox: false,
+                },
+              ],
+            },
+          ],
+        ],
+      },
     }),
   ],
 };

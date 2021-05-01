@@ -5,7 +5,9 @@
   width: 100%;
   height: 100%;
   display: block;
-  background: $secondary-colour;
+  background: url('../../shared/images/story-background.jpg') no-repeat;
+  background-size: 66% auto;
+  background-position: 124% 70%;
   overflow: hidden;
 
   .alpha-layer {

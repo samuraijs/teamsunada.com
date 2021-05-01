@@ -35,11 +35,11 @@
     transform: translateY(-50%);
     overflow: hidden;
     font-family: 'Josefin Sans';
-    padding: 3em;
+    padding: $spacing;
 
     &-area {
       background: transparent;
-      margin-bottom: 6em;
+      margin-bottom: ($spacing * 2);
 
       &:last-child {
         margin-bottom: 0;

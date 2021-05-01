@@ -9,21 +9,21 @@
   overflow: hidden;
 
   .primary {
-    width: calc(100% - 12em);
-    height: calc(100% - 6em);
+    width: calc(100% - #{$spacing * 4});
+    height: calc(100% - #{$spacing * 4});
     display: block;
-    margin: 3em;
+    margin: #{$spacing * 2} $spacing;
     background: $white;
     color: $primary-colour;
     text-align: center;
     position: relative;
     overflow: hidden;
     font-family: 'Josefin Sans';
-    padding: 0 3em;
+    padding: 0 $spacing;
 
     &-header {
       text-transform: uppercase;
-      font-size: 3em;
+      font-size: $font-size-large;
       margin-bottom: 0.25em;
       font-weight: normal;
     }

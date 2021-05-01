@@ -12,16 +12,15 @@
   .primary {
     width: calc(55%);
     min-width: 40em;
-    height: calc(100% - 12em);
+    height: calc(100% - ($spacing * 6));
     display: block;
-    margin: 3em;
-    padding: 3em;
+    margin: ($spacing * 2) $spacing;
+    padding: $spacing;
     background: rgba($white, 0.75);
     color: $primary-colour;
     position: relative;
     overflow: hidden;
     font-family: 'Josefin Sans';
-    margin: 3em;
 
     &-header {
       text-transform: uppercase;
@@ -34,8 +33,11 @@
     &-rows {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       height: 80%;
+
+      .row {
+        margin: 1.5em 0;
+      }
 
       .question {
         font-weight: bold;

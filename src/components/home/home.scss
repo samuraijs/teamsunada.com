@@ -21,11 +21,12 @@
 
     &-header {
       text-transform: uppercase;
-      font-size: 3em;
+      font-size: $font-size-large;
       margin-bottom: 0.25em;
       font-family: 'Josefin Sans';
       font-weight: normal;
     }
+
     .secondary-header {
       margin-top: 0;
       font-family: 'Dancing Script';
@@ -51,21 +52,6 @@
     width: 100%;
     height: 100%;
     background: url('../../shared/images/bamboo-transparency.png') no-repeat;
-    background-size: auto 175%;
-    background-position: -8em -8em;
+    background-size: auto 100%;
   }
-}
-
-.nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-}
-
-.menu-icon {
-  display: block;
-  color: $white;
-  margin: 1.5em 3em;
-  cursor: pointer;
 }

@@ -20,8 +20,12 @@ module.exports = {
       { test: /\.(css)$/, use: ['style-loader', 'css-loader'] },
       { test: /\.(scss)$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
       {
-        test: /\.(ttf|png|jpeg|jpg|woff2)$/,
+        test: /\.(ttf|woff2)$/,
         type: 'asset/resource',
+      },
+      {
+        test: /\.(png|jpeg|jpg)$/,
+        type: 'asset',
       },
     ],
   },
@@ -41,7 +45,7 @@ module.exports = {
         plugins: [
           ['gifsicle', { interlaced: true }],
           ['jpegtran', { progressive: true }],
-          ['optipng', { optimizationLevel: 5 }],
+          ['optipng', { optimizationLevel: 2 }],
           [
             'svgo',
             {

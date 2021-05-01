@@ -10,11 +10,13 @@ import Schedule from '../schedule';
 import Logistics from '../logistics';
 import Story from '../story';
 import FAQ from '../faq';
+import Nav from '../nav';
 import './app.scss';
 
 const App = () => {
   return (
     <Router>
+      <Nav />
       <Switch>
         <Route path="/faq">
           <FAQ />
